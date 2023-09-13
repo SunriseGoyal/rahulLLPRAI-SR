@@ -13,15 +13,15 @@ public class EmployeeController
 {
 @Autowired
 EmployeeRepository erepo;
-	@RequestMapping("/all")
-	public List<Employee> alldata()
+	@RequestMapping("/save")
+	public String savedata()
 	{
-	return erepo.findAll();
-	}
-	@RequestMapping("/id/{id}")
-	public Optional<Employee> byAge(@PathVariable int age)
-{
-	return erepo.findById(age);
+	Employee e=new Employee();
+		e.setName("Rahul);
+		e.setCity(Ranchi);
+		e.setAge(17);
+		erepo.save(e);
+		return "testing";
 }
 }		
 		

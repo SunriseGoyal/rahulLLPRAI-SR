@@ -11,17 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class EmployeeController
 {
-@Autowired
-EmployeeRepository erepo;
-	@RequestMapping("/save")
-	public String savedata()
+@RequestMapping("/")
+	public String test()
 	{
-	Employee e=new Employee();
-		e.setName("Rahul);
-		e.setCity(Ranchi);
-		e.setAge(17);
-		erepo.save(e);
 		return "testing";
+	}
 }
-}		
 		
